@@ -1,0 +1,6 @@
+make.exe --dry-run --always-make --keep-going --print-directory
+make: Entering directory 'd:/Windows/Desktop/C C++'
+make: Leaving directory 'd:/Windows/Desktop/C C++'
+ 
+make: *** No targets specified and no makefile found.  Stop.
+

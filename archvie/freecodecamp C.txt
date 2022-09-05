@@ -1,0 +1,708 @@
+//////////SECTION 1
+
+// #include <stdio.h>
+// #include <stdlib.h>
+
+// int main()
+// {
+//     char characterName[] = "Dragon Loli";
+//     int characterAge = 2479;
+
+//     printf("O nome do cara era %s meu bruxo.\n", characterName);
+//     printf("Alem disso meu mano, o cara tinha %d anos.\n", characterAge);
+//     printf("De novo meu mano, o nome do cara era %s", characterName);
+//     characterAge = 4;
+//     printf("Mas na verdade, a idade dela era %d", characterAge);
+
+//     return 0;
+// } 
+
+//////////SECTION 2
+
+// #include <stdio.h>
+// #include <stdlib.h>
+
+// int main()
+// {
+//     int idade = 4;
+//     double notaNumero = 3.2;
+//     char notaLetra = 'B';
+//     char fraseDoBem[] = "Estou escrevendo algo aqui para testar o quanto isso aqui aguenta";
+
+//     printf("Ola mundinho lindo >:)\nTeste\n");
+//     printf("Pi eh igual a %f, a %s eh de  %d", 3.141598, "idade", idade);
+//     printf("\nO caractere eh igual a %c", notaLetra);
+
+//     return 0;
+// }
+
+//////////SECTION 3
+
+// #include <stdio.h>
+// #include <stdlib.h>
+
+// int main()
+// {
+//     /* haha jonathan you are banging my daughter*/
+//     //test
+//     printf("%f",);
+// }
+
+//////////SECTION 4
+
+// #include <stdio.h>
+// #include <stdlib.h>
+
+// int main()
+// {
+//     const int NUM = 5;
+//     printf("%d\n", NUM);
+//     int num = 8;
+//     printf("%d\n", NUM);
+
+//     printf("%d", 650);    
+
+//     return 0;
+// }
+
+//////////SECTION 5
+
+// #include <stdio.h>
+// #include <stdlib.h>
+
+// int main()
+// {
+//     // double nota;
+//     // printf("Insira a sua nota irmao: ");
+//     // scanf("%lf", &nota);
+
+//     // printf("A sua idade eh entao igual a %f", nota);
+
+//     // char letra;
+
+//     // printf("Insira a sua letra irmao: \n");
+//     // scanf("%c", &letra);
+//     // printf("A letra escolhida foi igual a %c", letra);
+
+//     // char Nome[20];
+//     // printf("Insira o seu nome irmao (maximo 20 caracteres)");
+//     // fgets(Nome, 20, stdin);
+//     // printf("Ola Senhor(a) %s", Nome);
+
+//     return 0;
+// }
+
+//////////SECTION 6
+
+// #include <stdio.h>
+// #include <stdlib.h>
+
+// int main()
+// {
+//     double numA;
+//     printf("Insira o primeiro numero: \n");
+//     scanf("%lf", &numA);
+
+//     double numB;
+//     printf("Insira o seugundo numero: \n");
+//     scanf("%lf", &numB);
+    
+//     int operacao;
+//     printf("Escolha a operacao:\n");
+//     printf("1 - Soma\n 2- Subtracao\n");
+//     scanf("%d", &operacao);
+
+//     switch (operacao) {
+//         case 1:
+//             printf("O resultado eh igual a %f", (numA + numB));
+//             break;
+//         case 2:
+//             printf("O resultado eh igual a %f", (numA - numB));
+//             break;
+//         default:
+//             printf("\nErrado");
+//             break;
+//         break;
+//     }
+// }
+
+//////////SECTION 7
+
+// #include <stdio.h>
+// #include <stdlib.h>
+
+// int main()
+// {
+//     char color[20];
+//     char plural[20];
+//     char celebA[20];
+//     char celebB[20];
+
+//     printf("Insira uma cor\n");
+//     scanf("%s", color);
+//     printf("Insira um plural\n");
+//     scanf("%s", plural);
+//     printf("Insira uma celebridade:\n");
+//     scanf("%s%s", celebA, celebB);
+
+//     printf("Roses are %s \n", color);
+//     printf("%s are blue\n", plural);
+//     printf("I love %s %s \n", celebA, celebB);
+
+//     return 0;
+// }
+
+//////////SECTION 80 - Arrays https://youtu.be/KJgsSFOSQv0?t=5191
+
+// #include <stdio.h>
+// #include <stdlib.h>
+
+// int main()
+// {
+//     //int numerosSortudos[] = {42, 34, 12, 47, 3, 356};
+//     char string[] = "Testando uma string aqui";
+//     int numerosSortudos[10];
+//     numerosSortudos[2] = 3;
+//     printf("%d\n", numerosSortudos[0]);
+//     printf(string);
+
+
+//     return 0;
+// }
+
+//////////SECTION 9 - Functions
+
+// #include <stdio.h>
+// #include <stdlib.h>
+
+// int main()
+// {
+//     char nameA[10];
+//     printf("Escreva o seu nome");
+//     scanf("%s", nameA);
+//     digaOla(nameA);
+//     digaOla("Oscar niemeyer", 53);
+//     return 0;
+// }
+
+
+// void digaOla(char name[], int age){
+//     printf("Hola que tal, %s, que tem %d anos de idade\n", name, age);
+// }
+
+////////SECTION 10 - Return Statement
+
+// #include <stdio.h>
+// #include <stdlib.h>
+
+// double cubinho(double num)
+// {
+//     return num * num * num;
+//     printf("Eu sou gay e nazista haha edgy");
+// }
+
+// int main()
+// {
+//     double numero;
+//     printf("Insira o numero a ser cubado");
+//     scanf("%lf", &numero);
+//     printf("O resultado eh igual a %f", cubinho(numero));
+//     return 0;
+// }
+
+//////////SECTION 11 - If 
+
+// #include <stdio.h>
+// #include <stdlib.h>
+
+// int maximo(int num1, int num2, int num3)
+// {
+//     int Resultado;
+//     if (num1 >= num2 && num1 >= num3)
+//     {
+//         Resultado = num1;
+//     }
+//     else if (num2 >= num1 && num2 >= num3)
+//     {
+//         Resultado = num2;
+//     }
+//     else
+//     {
+//         Resultado = num3;
+//     }
+//     return Resultado; 
+// }
+
+
+// int main()
+// {
+//     int numA, numB, numC;
+//     // int numB;
+//     // int numC;
+//     printf("Insira os numeros a serem comparados");
+//     scanf("%d", &numA);
+//     printf("\n Insira o segundo numero:");
+//     scanf("%d", &numB);
+//     printf("\n Insira o terceiro numero:");
+//     scanf("%d", &numC);
+//     printf("%d eh o maior numero", maximo(numA, numB, numC));
+
+//     if(!(3 > 2 || 2 > 5))
+//     {
+//         printf("\nTrue");
+//     }
+//     else
+//     {
+//         printf("\nFalse");
+//     }
+
+//     return 0;
+// }
+
+//////////SECTION 12
+
+// #include <stdio.h>
+// #include <stdlib.h>
+
+// int main()
+// {
+//     double num1;
+//     double num2;
+//     char operacao;
+    
+//     printf("Insira o primeiro numero\n");
+//     scanf("%lf", &num1);
+//     printf("Escolha a operacao a ser realizada\n+ - Soma\n- - Subtracao\n* - Mult\n/ - Div\n");
+//     scanf(" %c", &operacao);
+//     printf("Insira o segundo numero\n");
+//     scanf("%lf", &num2);
+
+//     if (operacao == '+')
+//     {
+//         printf("%f", num1 + num2);
+//     }
+//     else if (operacao == '-')
+//     {
+//         printf("%f", num1 - num2);
+//     }
+//     else if (operacao == '*')
+//     {
+//         printf("%f", num1 * num2);
+//     }
+//     else if (operacao == '/')
+//     {
+//         printf("%f", num1 / num2);
+//     }
+//     else
+//     {
+//         printf("Operacao invalida!!!");
+//     }
+
+
+
+
+//     return 0;
+// }
+
+//////////SECTION 13 - Nintendo Switch
+
+// #include <stdio.h>
+// #include <stdlib.h>
+
+// int main()
+// {
+//     char notinhadosGu;
+//     printf("Insira a nota (A - F)\n");
+//     scanf(" %c", &notinhadosGu);
+
+//     switch (notinhadosGu)
+//     {
+//         case 'A':
+//             printf("Parabens meu caro");
+//             break;
+//         case 'B':
+//             printf("Ta bom meu chapa");
+//             break;
+//         case 'C':
+//             printf("Tamo chegando la meu compatriota");
+//             break;
+//         case 'D':
+//             printf("Os guri precisa estudar mais");
+//             break;
+//         case 'F':
+//             printf("Irmao, nao foi dessa vez");
+//             break;
+//         default:
+//             printf("Cara, isso ai nao eh uma nota");
+//     }
+
+//     return 0;
+// }
+
+//////////SECTION 14 - Estruturas
+
+// #include <stdio.h>
+// #include <stdlib.h>
+// #include <string.h>
+
+// struct Estudante
+// {
+//     char nome[50];
+//     char curso[50];
+//     int idade;
+//     double nota;
+// };
+
+// int main()
+// {
+//     struct Estudante n1;
+//     n1.idade = 23;
+//     n1.nota = 7.8;
+//     strcpy( n1.nome, "Eduardo");
+//     strcpy( n1.curso, "Direito");
+
+//     struct Estudante n2;
+//     n2.idade = 27;
+//     n2.nota = 7.9;
+//     strcpy( n2.nome, "Maria");
+//     strcpy( n2.curso, "Psicologia");
+
+//     printf("%f\n", n1.nota);
+//     printf("%s\n", n1.nome);
+
+//     printf("%d\n", n2.idade);
+//     printf("%f\n", n2.nota);
+
+// }
+
+//////////SECTION 15 - While https://youtu.be/KJgsSFOSQv0?t=8984
+
+//
+
+// #include <stdio.h>
+// #include <stdlib.h>
+
+// int main(){
+//     int index = 1;
+//     do{
+//         index++;
+//         printf("%d\n", index);
+//     }while(index < 1000);
+//     return 0;
+// }
+
+// // int main(){
+// //     int index = 1;
+// //     while (index < 10000)
+// //     {
+// //         index++;
+// //         printf("%d\n");
+// //     }
+// //     return 0;    
+// // }
+
+//Decodificador Automático de Cifra de César
+
+// #include <stdio.h>
+// #include <stdlib.h>
+// #include <string.h>
+// #include <conio.h>
+
+// int main (){
+
+//     FILE *arq, *arqdec; // declarando os ponteiros dos arquivos
+//     char str[999], nome[99], nomedec[99]; // declarando as strings a serem utilizadas
+
+//     printf("digite o nome do arquivo de texto, que deve estar no mesmo diretorio que esse arquivo main,\na ter sua cifra de cesar decodificada:\n");
+//     gets(nome); // pega do usuario o nome do arquivo que deseja abrir
+
+//     for (int i=0; i<99; i++){
+//         nomedec[i] = nome[i]; // iguala nomedec (anteriormente vazio) ao nome
+//     }
+//     strcat(nomedec,"_dec.txt"); // adiciona o sufixo solicitado e o tipo txt a string nomedec
+//     strcat(nome,".txt"); // adiciona o tipo txt a string nome
+
+//     arq = fopen(nome,"rt"); // abre o arquivo de nome igual a string nome para leitura
+//     arqdec = fopen(nomedec,"wt"); // cria um arquivo de nome igual a string nomedec
+
+//     fscanf(arq, " %s", str); // lendo o conteudo do arquivo arq e o atribuindo a string str
+//     int len = strlen(str);
+
+//     int score [26];
+
+//     char alfabeto[53] = "ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ"; // declara a string alfabeto como banco para as letras
+
+//     for (int x=0; x<26; x++){
+//         for (int i=0; i<len; i++){ // cria um laço com quantidade de repetições igual a capacidade de caracteres em str
+//             switch (str[i]){ // verifica individualmente cada caractere de str e troca os caracacteres descodificando a cifra de cesar
+//                 case 'A': str[i] = alfabeto[0+x]; break;
+//                 case 'B': str[i] = alfabeto[1+x]; break;
+//                 case 'C': str[i] = alfabeto[2+x]; break;
+//                 case 'D': str[i] = alfabeto[3+x]; break;
+//                 case 'E': str[i] = alfabeto[4+x]; break;
+//                 case 'F': str[i] = alfabeto[5+x]; break;
+//                 case 'G': str[i] = alfabeto[6+x]; break;
+//                 case 'H': str[i] = alfabeto[7+x]; break;
+//                 case 'I': str[i] = alfabeto[8+x]; break;
+//                 case 'J': str[i] = alfabeto[9+x]; break;
+//                 case 'K': str[i] = alfabeto[10+x]; break;
+//                 case 'L': str[i] = alfabeto[11+x]; break;
+//                 case 'M': str[i] = alfabeto[12+x]; break;
+//                 case 'N': str[i] = alfabeto[13+x]; break;
+//                 case 'O': str[i] = alfabeto[14+x]; break;
+//                 case 'P': str[i] = alfabeto[15+x]; break;
+//                 case 'Q': str[i] = alfabeto[16+x]; break;
+//                 case 'R': str[i] = alfabeto[17+x]; break;
+//                 case 'S': str[i] = alfabeto[18+x]; break;
+//                 case 'T': str[i] = alfabeto[19+x]; break;
+//                 case 'U': str[i] = alfabeto[20+x]; break;
+//                 case 'V': str[i] = alfabeto[21+x]; break;
+//                 case 'W': str[i] = alfabeto[22+x]; break;
+//                 case 'X': str[i] = alfabeto[23+x]; break;
+//                 case 'Y': str[i] = alfabeto[24+x]; break;
+//                 case 'Z': str[i] = alfabeto[25+x]; break;
+//             }
+//         }
+//         score[x] = 0;
+//         for (int i=0; i<len; i++){ // laço que examina e pontua cada deslocamento de acordo com a frequencia de uso do caractere na lingua portuguesa
+//             switch (str[i]){
+//                 case 'A': score[x] = score[x] + 1463; break;
+//                 case 'B': score[x] = score[x] + 104;  break;
+//                 case 'C': score[x] = score[x] + 388;  break;
+//                 case 'D': score[x] = score[x] + 499;  break;
+//                 case 'E': score[x] = score[x] + 1257; break;
+//                 case 'F': score[x] = score[x] + 102;  break;
+//                 case 'G': score[x] = score[x] + 130;  break;
+//                 case 'H': score[x] = score[x] + 128;  break;
+//                 case 'I': score[x] = score[x] + 618;  break;
+//                 case 'J': score[x] = score[x] + 40;   break;
+//                 case 'K': score[x] = score[x] + 2;    break;
+//                 case 'L': score[x] = score[x] + 278;  break;
+//                 case 'M': score[x] = score[x] + 474;  break;
+//                 case 'N': score[x] = score[x] + 505;  break;
+//                 case 'O': score[x] = score[x] + 1073; break;
+//                 case 'P': score[x] = score[x] + 252;  break;
+//                 case 'Q': score[x] = score[x] + 120;  break;
+//                 case 'R': score[x] = score[x] + 653;  break;
+//                 case 'S': score[x] = score[x] + 781;  break;
+//                 case 'T': score[x] = score[x] + 434;  break;
+//                 case 'U': score[x] = score[x] + 463;  break;
+//                 case 'V': score[x] = score[x] + 167;  break;
+//                 case 'W': score[x] = score[x] + 1;    break;
+//                 case 'X': score[x] = score[x] + 21;   break;
+//                 case 'Y': score[x] = score[x] + 1;    break;
+//                 case 'Z': score[x] = score[x] + 47;   break;
+//             }
+//         }
+//         fclose(arq); // fechando o fluxo do arquivo arq
+//         arq = fopen(nome,"rt"); // abre o arquivo de nome igual a string nome para leitura
+//         fscanf(arq, " %s", str); // lendo o conteudo do arquivo arq e o atribuindo a string str
+//     }
+
+//     printf("\n\nPONTUACOES POR CHAVE / DESLOCAMENTO");
+//     int ordenado [26];
+//     for (int i=0; i<26; i++){
+//         ordenado[i] = score[i]; // criando vetor para modificações mantendo o vetor score, para que depois seja possivel a comparação
+//         printf("\n%i: %i", i, ordenado[i]);
+//     }
+
+//     int aux;
+//     for (int a=1; a<26; a++){ // bubblesort para posicionar a maior pontuação em ordenado[25]
+//         for (int b=0; b<26-1; b++){
+//             if (ordenado[b] > ordenado[b+1]){
+//                 aux = ordenado[b];
+//                 ordenado[b] = ordenado[b+1];
+//                 ordenado[b+1] = aux;
+//             }
+//         }
+//     }
+
+//     int posicao = 0;
+//     for (int i=0; i<26; i++){
+//         if (score[i] == ordenado[25]){ // comparando score com ordenado[25] para guardar a posição da maior pontuação
+//             posicao = i;
+//         }
+//     }
+
+//     printf("\n\n\nmaior pontuacao: %i\ne sua posicao: %i\n", ordenado[25], posicao);
+
+//     fclose(arq);
+//     arq = fopen(nome,"rt"); // abre o arquivo de nome igual a string nome para leitura
+//     char resultado [len]; // criando a string resultado
+//     fscanf(arq, " %s", resultado); // lendo novamente o conteudo do arquivo arq e o atribuindo a string resultado
+
+//     for (int i=0; i<len; i++){
+//         switch (resultado[i]){ // decodifica o resultado a partir da posição obtida
+//             case 'A': resultado[i] = alfabeto[0+posicao]; break;
+//             case 'B': resultado[i] = alfabeto[1+posicao]; break;
+//             case 'C': resultado[i] = alfabeto[2+posicao]; break;
+//             case 'D': resultado[i] = alfabeto[3+posicao]; break;
+//             case 'E': resultado[i] = alfabeto[4+posicao]; break;
+//             case 'F': resultado[i] = alfabeto[5+posicao]; break;
+//             case 'G': resultado[i] = alfabeto[6+posicao]; break;
+//             case 'H': resultado[i] = alfabeto[7+posicao]; break;
+//             case 'I': resultado[i] = alfabeto[8+posicao]; break;
+//             case 'J': resultado[i] = alfabeto[9+posicao]; break;
+//             case 'K': resultado[i] = alfabeto[10+posicao]; break;
+//             case 'L': resultado[i] = alfabeto[11+posicao]; break;
+//             case 'M': resultado[i] = alfabeto[12+posicao]; break;
+//             case 'N': resultado[i] = alfabeto[13+posicao]; break;
+//             case 'O': resultado[i] = alfabeto[14+posicao]; break;
+//             case 'P': resultado[i] = alfabeto[15+posicao]; break;
+//             case 'Q': resultado[i] = alfabeto[16+posicao]; break;
+//             case 'R': resultado[i] = alfabeto[17+posicao]; break;
+//             case 'S': resultado[i] = alfabeto[18+posicao]; break;
+//             case 'T': resultado[i] = alfabeto[19+posicao]; break;
+//             case 'U': resultado[i] = alfabeto[20+posicao]; break;
+//             case 'V': resultado[i] = alfabeto[21+posicao]; break;
+//             case 'W': resultado[i] = alfabeto[22+posicao]; break;
+//             case 'X': resultado[i] = alfabeto[23+posicao]; break;
+//             case 'Y': resultado[i] = alfabeto[24+posicao]; break;
+//             case 'Z': resultado[i] = alfabeto[25+posicao]; break;
+//         }
+//     }
+
+//     fputs(resultado, arqdec); // escreve o conteudo de str, depois de modificado, no arquivo arqdec
+
+//     printf("\n\ntexto decodificado: %s\n\n\n(um arquivo decodificado de sufixo _dec foi criado no mesmo diretorio do original)\n\n\n\n\n\n", resultado); // amostra do texto decodificado no console
+
+//     fclose(arq); // fechando o fluxo do arquivo arq
+//     fclose(arqdec); // fechando o fluxo do arquivo arqdec
+
+//     return 0;
+// }
+
+//SECTION 16 - Guessing Game https://youtu.be/KJgsSFOSQv0?t=9483
+
+// #include <stdio.h>
+// #include <stdlib.h>
+
+// int main()
+// {
+//     int secretNumber = 5;
+//     int guess;
+//     int count = 0;
+
+//     while ((guess != secretNumber) && (count < 3))
+//     {
+//         printf("Chute um numero:");
+//         scanf("%d", &guess);
+//         count++;
+//     }
+
+//     if (guess == secretNumber)
+//     { 
+//         printf("Voce ganhou mano");
+//     }
+//     else
+//     {
+//         printf("Nao foi dessa vez");
+//     }
+
+//     scanf("%d", &guess);
+//     return 0;
+// }
+
+//SECTION 17 - For Loops
+
+// #include <stdio.h>
+// #include <stdlib.h>
+
+// int main(){
+//     int i;
+//     int luckyNumbers[] = {1, 5, 3 , 76 ,234 ,34};
+
+
+//     for(i = 0; i < 6; i++)
+//     {
+//         printf("%d\n", luckyNumbers[i]);
+//     }
+// }
+
+//SECTION 18 - Arrays
+
+// #include <stdio.h>
+// #include <stdlib.h>
+
+// int main(){
+//     int numeros[3][2] = {
+//         {1, 2},
+//         {3, 4},
+//         {5, 6}
+//     };
+
+//     int i, j;
+//     for(i = 0; i < 3; i++) {
+//         for(j = 0; j < 2; j++) {
+//             printf("%d,", numeros[i][j]);
+//         }
+//         printf("\n");
+//     }
+//     return 0;
+// }
+
+//SECTION 19, 20 - Memory Addresses and Pointers
+
+// #include <stdio.h>
+// #include <stdlib.h>
+
+// int main(){
+//     int age = 18;
+//     int * pAge = &age;
+//     double gpa = 2.6;
+//     double * pGpa = &gpa;
+//     char grade = 'C';
+//     char * pGrade = &grade;
+
+//     printf("%p, %p, %p", &age, &gpa, &grade);
+
+//     return 0;
+// }
+
+//SECTION 21 - Dereferencing Pointers
+
+// #include <stdio.h>
+// #include <stdlib.h>
+
+// int main(){
+//     int age = 18;
+//     int * pAge = &age;
+
+//     printf("%d", *&*&age);
+// }
+
+//SECTION 22 - Writing Files
+
+// #include <stdio.h>
+// #include <stdlib.h>
+
+// int main(){
+//     //a -> append (adicionar)
+//     //w -> write
+//     //r -> ler
+//     FILE * fpointer = fopen("arquivo.txt", "a");
+
+//     fprintf(fpointer, "Yappari manko ga ichiban");
+
+    
+//     fclose(fpointer);
+//     return 0;
+// }
+
+//SECTION 23 - Reading Files
+
+// #include <stdio.h>
+// #include <stdlib.h>
+
+// int main(){
+//     char line[255];
+//     FILE * fpointer = fopen("arquivo.txt", "r");
+
+//     fgets(line, 255, fpointer);
+//     fgets(line, 255, fpointer);
+//     printf("%s", line);
+
+
+//     fclose(fpointer);
+//     return 0;
+// }

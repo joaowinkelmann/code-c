@@ -1,0 +1,170 @@
+// Decodificador Automático de Cifra de César
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <conio.h>
+
+int main (){
+
+    FILE *arq, *arqdec; // declarando os ponteiros dos arquivos
+    char str[999], nome[99], nomedec[99]; // declarando as strings a serem utilizadas
+
+    printf("digite o nome do arquivo de texto, que deve estar no mesmo diretorio que esse arquivo main,\na ter sua cifra de cesar decodificada:\n");
+    gets(nome); // pega do usuario o nome do arquivo que deseja abrir
+
+    for (int i=0; i<99; i++){
+        nomedec[i] = nome[i]; // iguala nomedec (anteriormente vazio) ao nome
+    }
+    strcat(nomedec,"_dec.txt"); // adiciona o sufixo solicitado e o tipo txt a string nomedec
+    strcat(nome,".txt"); // adiciona o tipo txt a string nome
+
+    arq = fopen(nome,"rt"); // abre o arquivo de nome igual a string nome para leitura
+    arqdec = fopen(nomedec,"wt"); // cria um arquivo de nome igual a string nomedec
+
+    fscanf(arq, " %s", str); // lendo o conteudo do arquivo arq e o atribuindo a string str
+    int len = strlen(str);
+
+    int score [26];
+
+    char alfabeto[53] = "ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ"; // declara a string alfabeto como banco para as letras
+
+    for (int x=0; x<26; x++){
+        for (int i=0; i<len; i++){ // cria um laço com quantidade de repetições igual a capacidade de caracteres em str
+            switch (str[i]){ // verifica individualmente cada caractere de str e troca os caracacteres descodificando a cifra de cesar
+                case 'A': str[i] = alfabeto[0+x]; break;
+                case 'B': str[i] = alfabeto[1+x]; break;
+                case 'C': str[i] = alfabeto[2+x]; break;
+                case 'D': str[i] = alfabeto[3+x]; break;
+                case 'E': str[i] = alfabeto[4+x]; break;
+                case 'F': str[i] = alfabeto[5+x]; break;
+                case 'G': str[i] = alfabeto[6+x]; break;
+                case 'H': str[i] = alfabeto[7+x]; break;
+                case 'I': str[i] = alfabeto[8+x]; break;
+                case 'J': str[i] = alfabeto[9+x]; break;
+                case 'K': str[i] = alfabeto[10+x]; break;
+                case 'L': str[i] = alfabeto[11+x]; break;
+                case 'M': str[i] = alfabeto[12+x]; break;
+                case 'N': str[i] = alfabeto[13+x]; break;
+                case 'O': str[i] = alfabeto[14+x]; break;
+                case 'P': str[i] = alfabeto[15+x]; break;
+                case 'Q': str[i] = alfabeto[16+x]; break;
+                case 'R': str[i] = alfabeto[17+x]; break;
+                case 'S': str[i] = alfabeto[18+x]; break;
+                case 'T': str[i] = alfabeto[19+x]; break;
+                case 'U': str[i] = alfabeto[20+x]; break;
+                case 'V': str[i] = alfabeto[21+x]; break;
+                case 'W': str[i] = alfabeto[22+x]; break;
+                case 'X': str[i] = alfabeto[23+x]; break;
+                case 'Y': str[i] = alfabeto[24+x]; break;
+                case 'Z': str[i] = alfabeto[25+x]; break;
+            }
+        }
+        score[x] = 0;
+        for (int i=0; i<len; i++){ // laço que examina e pontua cada deslocamento de acordo com a frequencia de uso do caractere na lingua portuguesa
+            switch (str[i]){
+                case 'A': score[x] = score[x] + 1463; break;
+                case 'B': score[x] = score[x] + 104;  break;
+                case 'C': score[x] = score[x] + 388;  break;
+                case 'D': score[x] = score[x] + 499;  break;
+                case 'E': score[x] = score[x] + 1257; break;
+                case 'F': score[x] = score[x] + 102;  break;
+                case 'G': score[x] = score[x] + 130;  break;
+                case 'H': score[x] = score[x] + 128;  break;
+                case 'I': score[x] = score[x] + 618;  break;
+                case 'J': score[x] = score[x] + 40;   break;
+                case 'K': score[x] = score[x] + 2;    break;
+                case 'L': score[x] = score[x] + 278;  break;
+                case 'M': score[x] = score[x] + 474;  break;
+                case 'N': score[x] = score[x] + 505;  break;
+                case 'O': score[x] = score[x] + 1073; break;
+                case 'P': score[x] = score[x] + 252;  break;
+                case 'Q': score[x] = score[x] + 120;  break;
+                case 'R': score[x] = score[x] + 653;  break;
+                case 'S': score[x] = score[x] + 781;  break;
+                case 'T': score[x] = score[x] + 434;  break;
+                case 'U': score[x] = score[x] + 463;  break;
+                case 'V': score[x] = score[x] + 167;  break;
+                case 'W': score[x] = score[x] + 1;    break;
+                case 'X': score[x] = score[x] + 21;   break;
+                case 'Y': score[x] = score[x] + 1;    break;
+                case 'Z': score[x] = score[x] + 47;   break;
+            }
+        }
+        fclose(arq); // fechando o fluxo do arquivo arq
+        arq = fopen(nome,"rt"); // abre o arquivo de nome igual a string nome para leitura
+        fscanf(arq, " %s", str); // lendo o conteudo do arquivo arq e o atribuindo a string str
+    }
+
+    printf("\n\nPONTUACOES POR CHAVE / DESLOCAMENTO");
+    int ordenado [26];
+    for (int i=0; i<26; i++){
+        ordenado[i] = score[i]; // criando vetor para modificações mantendo o vetor score, para que depois seja possivel a comparação
+        printf("\n%i: %i", i, ordenado[i]);
+    }
+
+    int aux;
+    for (int a=1; a<26; a++){ // bubblesort para posicionar a maior pontuação em ordenado[25]
+        for (int b=0; b<26-1; b++){
+            if (ordenado[b] > ordenado[b+1]){
+                aux = ordenado[b];
+                ordenado[b] = ordenado[b+1];
+                ordenado[b+1] = aux;
+            }
+        }
+    }
+
+    int posicao = 0;
+    for (int i=0; i<26; i++){
+        if (score[i] == ordenado[25]){ // comparando score com ordenado[25] para guardar a posição da maior pontuação
+            posicao = i;
+        }
+    }
+
+    printf("\n\n\nmaior pontuacao: %i\ne sua posicao: %i\n", ordenado[25], posicao);
+
+    fclose(arq);
+    arq = fopen(nome,"rt"); // abre o arquivo de nome igual a string nome para leitura
+    char resultado [len]; // criando a string resultado
+    fscanf(arq, " %s", resultado); // lendo novamente o conteudo do arquivo arq e o atribuindo a string resultado
+
+    for (int i=0; i<len; i++){
+        switch (resultado[i]){ // decodifica o resultado a partir da posição obtida
+            case 'A': resultado[i] = alfabeto[0+posicao]; break;
+            case 'B': resultado[i] = alfabeto[1+posicao]; break;
+            case 'C': resultado[i] = alfabeto[2+posicao]; break;
+            case 'D': resultado[i] = alfabeto[3+posicao]; break;
+            case 'E': resultado[i] = alfabeto[4+posicao]; break;
+            case 'F': resultado[i] = alfabeto[5+posicao]; break;
+            case 'G': resultado[i] = alfabeto[6+posicao]; break;
+            case 'H': resultado[i] = alfabeto[7+posicao]; break;
+            case 'I': resultado[i] = alfabeto[8+posicao]; break;
+            case 'J': resultado[i] = alfabeto[9+posicao]; break;
+            case 'K': resultado[i] = alfabeto[10+posicao]; break;
+            case 'L': resultado[i] = alfabeto[11+posicao]; break;
+            case 'M': resultado[i] = alfabeto[12+posicao]; break;
+            case 'N': resultado[i] = alfabeto[13+posicao]; break;
+            case 'O': resultado[i] = alfabeto[14+posicao]; break;
+            case 'P': resultado[i] = alfabeto[15+posicao]; break;
+            case 'Q': resultado[i] = alfabeto[16+posicao]; break;
+            case 'R': resultado[i] = alfabeto[17+posicao]; break;
+            case 'S': resultado[i] = alfabeto[18+posicao]; break;
+            case 'T': resultado[i] = alfabeto[19+posicao]; break;
+            case 'U': resultado[i] = alfabeto[20+posicao]; break;
+            case 'V': resultado[i] = alfabeto[21+posicao]; break;
+            case 'W': resultado[i] = alfabeto[22+posicao]; break;
+            case 'X': resultado[i] = alfabeto[23+posicao]; break;
+            case 'Y': resultado[i] = alfabeto[24+posicao]; break;
+            case 'Z': resultado[i] = alfabeto[25+posicao]; break;
+        }
+    }
+
+    fputs(resultado, arqdec); // escreve o conteudo de str, depois de modificado, no arquivo arqdec
+
+    printf("\n\ntexto decodificado: %s\n\n\n(um arquivo decodificado de sufixo _dec foi criado no mesmo diretorio do original)\n\n\n\n\n\n", resultado); // amostra do texto decodificado no console
+
+    fclose(arq); // fechando o fluxo do arquivo arq
+    fclose(arqdec); // fechando o fluxo do arquivo arqdec
+
+    return 0;
+}
