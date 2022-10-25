@@ -23,4 +23,6 @@ int main(void){
         printf("\t%d", torre2[i]);
         printf("\t%d\n", torre3[i]);
     }
+
+    
 }
